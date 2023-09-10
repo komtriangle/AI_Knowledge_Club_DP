@@ -6,7 +6,7 @@
 git clone https://github.com/komtriangle/AI_Knowledge_Club_DP.git
 ```
 
-скачать модель, разархивировать ее, половитьв папку AI_Knowledge_Club_DP
+скачать модель, разархивировать ее, положить папку AI_Knowledge_Club_DP
 https://github.com/komtriangle/AI_Knowledge_Club_DP
 
 Перейти в папку с docker-compose:
