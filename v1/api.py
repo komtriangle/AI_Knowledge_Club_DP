@@ -11,11 +11,10 @@ spark = SparkSession.builder \
     .appName('Recommender_system') \
     .getOrCreate()
 
-save_path = "C:\\Хакатоны\ЦП_НН\\"
 
-model = ALSModel.load(f'{save_path}saved_model')
+model = ALSModel.load('saved_model')
 
 
 @router.get("/get_prediction")
 async def get_prediction(user_id):
-    return model.recommendForUserSubset([user_id], 10)
+    return model.recommendForUserSubset(spark.createDataFrame([{"user_id": user_id}]), 10)
